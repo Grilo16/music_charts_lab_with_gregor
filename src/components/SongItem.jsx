@@ -1,6 +1,7 @@
-const SongItem = function(){
+const SongItem = function({song}){
+    console.log(song)
     return (
-        <h3>This is the song item</h3>
+        <h3>{song.title.label}</h3>
     )
 };
 

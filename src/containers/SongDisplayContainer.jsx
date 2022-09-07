@@ -8,12 +8,12 @@ const SongDisplayContainer = function(){
 
     const getApiResult = function(){
         fetch("https://itunes.apple.com/gb/rss/topsongs/limit=20/json")
-        .then((res)=>{return res.json()})
-        .then((json) => {setSongs(json)})
+        .then(res => res.json())
+        .then(songList =>  setSongs(songList.feed.entry) )
     }
 
     useEffect(() => {
-        getApiResult()
+       getApiResult()
     },[])
 
 
