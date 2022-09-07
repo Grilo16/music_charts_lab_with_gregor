@@ -3,7 +3,7 @@ import SongItem from "./SongItem";
 const SongList = function({songs}){
     const songList = songs.map((song) => {
         return (
-            <SongItem song={song} listPosition={songs.indexOf(song)+1} />
+            <SongItem key={song.id.attributes["im:id"]} song={song} listPosition={songs.indexOf(song)+1}/>
         )
     })
 
